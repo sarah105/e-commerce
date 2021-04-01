@@ -1,0 +1,65 @@
+.card{
+    width: 24%;
+    border:1px;
+    background-color:white;
+    margin-bottom: 1%;
+    height: 60vh
+}
+.card-img{
+    max-width: 100%;
+    width: 100%;
+    max-height: 100%;
+}
+.card-body{
+    padding:5px 10px;
+    color:black
+}
+.card-subtitle{
+    /* margin-top: 10px; */
+    margin-bottom:20px;
+}
+.div-img{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.card-title{
+    cursor:pointer;
+    /* height: */
+    text-decoration: none;
+    display:block;
+    color:black;
+    font-size: large;
+    font-weight: bold;
+}
+.card-icon{
+    font-size:x-large;
+    /* border:1px;
+    background-color:white; */
+}
+.counter-div{
+    display: flex;
+    width: 30%;
+    align-items: center;
+    height: fit-content;
+}
+
+.counter-btn{
+    width:33.33%;
+    border: 1px;
+    margin:0 1px;
+    font-weight: bold;
+    /* padding:10px */
+    height:25px
+}
+.counter-value{
+    width:33.33%;
+    /* background-color:; */
+    text-align: center;
+    font-weight: bold;
+}
+.card-add{
+    display: flex;
+    justify-content: space-between;
+}
