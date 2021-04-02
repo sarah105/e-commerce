@@ -1,9 +1,12 @@
 import React from "react";
 import Home from "./Pages/Home";
 import Navbar from "./Components/Navbar";
-import Cart from "./Components/Cart";
-import Products from "./Components/Products";
-import Login from  "./Pages/Login";
+import Cart from "./Pages/Cart";
+import Products from "./Pages/ProductsPage";
+import Login from  "./Components/LoginForm";
+import Product from "./Pages/Product";
+import SignUp from "./Components/SignUp";
+import {CartProvider} from "./Context/CartContext"
 
 import {
   BrowserRouter,
@@ -12,18 +15,24 @@ import {
 } from "react-router-dom";
 function App() {
   return (
+    <CartProvider>
   <BrowserRouter>
-    <div>
+  {/* <SignUp /> */}
+  
+    <div className="app">
       <Navbar/>
-      </div>
+    </div>
+    {/* <SignUp /> */}
       <Switch>
        <Route path="/" exact component={Home}/>
        <Route path="/cart" exact component={Cart}/>
        <Route path="/login" exact component={Login}/>
+       <Route path="/products/:id" component={Product} />
        <Route path="/products" exact component={Products}/>
+       <Route path="/signup" exact component={SignUp} />
        </Switch>
-
-  </BrowserRouter>
+    
+  </BrowserRouter></CartProvider>
   );
 }
 

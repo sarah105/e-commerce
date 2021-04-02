@@ -1,0 +1,15 @@
+.filter{
+    /* background-color: red; */
+    width:15%;
+    padding:10px 20px;
+    position: fixed;
+    height: min-content;
+}
+.filter-cat{
+    /* direction: rtl; */
+    display: block;
+    cursor: pointer;
+    font-size: small;
+    text-decoration: none;
+    color:black;
+}

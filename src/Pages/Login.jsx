@@ -30,7 +30,7 @@ return(
 <h1 className="log-in-title">Log In</h1>
 <div className="sign-up-h3">
 <p>New to this syte ?</p>
-<Link to="/" className="sign-up-link"> <span>sign up</span></Link></div>
+<Link to="/signup" className="sign-up-link"> <span>sign up</span></Link></div>
 <div className="child1">
 <div className="text-b-1">E-mail</div>
 <input  type="email" name="email" onChange={handleChange} value={email}/>

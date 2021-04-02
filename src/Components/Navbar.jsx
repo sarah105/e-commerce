@@ -1,17 +1,21 @@
-import React from "react";
+import React,{useContext} from "react";
 import { FaCreativeCommonsBy } from "react-icons/fa";
 import {FiShoppingCart} from "react-icons/fi";
 import {Link} from "react-router-dom";
-var x =0;
+import "./../Css/navbar.css";
+import {CartContext} from "./../Context/CartContext"
 
 const Navbar =()=>{
+  const context = useContext(CartContext)
+  const counter = context.cart.length;
+  
 return(
   <div className="parent">
 
     <div className="child-1">
-    <h1>TechShed</h1>
-    <button> Get 15% off your first purchase </button>
-  </div>
+      <h1>TechShed</h1>
+      <button> Get 15% off your first purchase </button>
+    </div>
 
 
   <div className="child-2">
@@ -23,7 +27,7 @@ return(
       </ul>
 
       <button className="btn-1"> <FaCreativeCommonsBy size="2em" className="icon-1" /><Link to ="/login" className="nav-link">log in</Link></button>
-      <button className="btn-2"><Link to ="/cart" className="nav-link"><FiShoppingCart size="2em"/></Link></button>
+      <Link to ="/cart" className="nav-link count-cart "><FiShoppingCart size="2em"/><span className="count-span">{counter}</span></Link>
   </div>
 </div>
 );
