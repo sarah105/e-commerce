@@ -11,7 +11,7 @@ const Cart = () => {
     // } ,[])
 
     return ( 
-        <div className="container">
+        <div className="container-cart">
             <div className="start-div" >
             <h2>My Cart</h2>
             {

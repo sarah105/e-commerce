@@ -45,7 +45,7 @@ const Product = (props) => {
     }
 
     return (
-        <div className="container">
+        <div className="container-cart">
            { product !== {} &&  
            <div className="product-container">
                 <div className="product-part product-part-img">
