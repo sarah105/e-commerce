@@ -7,7 +7,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color:#EDECEC;
 }
-
+.app{
+  height: 100px;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -106,7 +108,7 @@ margin: 0px;
   justify-content: space-around;
   align-items: center;
 }
-/* form code*/
+/* form code
 .log-in-title{
 font-weight: bolder;
 font-size: 40px;
@@ -229,7 +231,7 @@ top:6%;
 right: 5%;
 font-size: 16px;
 
-}
+} */
 /*end form code*/
 /* start home code*/
 .container{

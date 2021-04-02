@@ -4,9 +4,10 @@
 }
 .container-log{
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-content: center;
-    height:100vh;
+    height: 85vh;
+    background-color: white;
 }
 .signUp{
     width:20%;
@@ -76,8 +77,8 @@
     width: 100%;
     height: 40px;
     color:white;
-    background-color: var(--mainColor);
-    border:1px;
+    /* background-color: var(--mainColor); */
+    /* border:1px; */
     border:hidden;
 }
 .form-btn:focus{

@@ -1,0 +1,11 @@
+.signupPage{
+    background-color: white;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+}
+.signupPage-span{
+    font-size: xx-large;
+    direction: rtl;
+    margin-right: 30px;
+}

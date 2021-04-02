@@ -1,11 +1,13 @@
 import React,{useState,useEffect} from 'react';
 import "./../Css/product.css";
 import axios from 'axios';
-
+import {CartContext} from "../Context/CartContext"
 
 const Product = (props) => {
+    const context = React.useContext(CartContext);
     const [product,setProduct] = useState({});
-    
+    const [quantity,setQuantity] = useState(0);
+
     const getProducts = async()=>{
         let data = [];
         await axios.get("https://ecommerce-response.herokuapp.com/")
@@ -26,11 +28,21 @@ const Product = (props) => {
         })
         return item;
     }
+    const handelClick = ()=>{
+        // const quantity = document.querySelector("#quantity").value
+        if(quantity > 0)
+            context.addToCart(product,quantity)
+    }
     
     useEffect(()=>{
         const id = props.match.params.id;
         getItem(id).then(item=>{setProduct(item);})
     },[])
+
+    const handleChange=(e)=>{
+        setQuantity(e.target.value)
+        
+    }
 
     return (
         <div className="container">
@@ -52,12 +64,15 @@ const Product = (props) => {
                     </div>
                     <div>
                     <p>There are <b>{product.quantity - product.sold}</b> from this product</p>
-                    <p className="margin-bottom">price: <b>{product.price}$</b></p><br/>
+                    <p >price: <b>{product.price}$</b></p>
                     </div>
 
                     <div>
-                    <input type="number" className="product-quantity margin-bottom" title="quantity do you want" min="1" placeholder="0"/><br />
-                    <button className="product-btn">Add to cart</button>
+                    <input type="number" id="quantity" value={quantity} onChange={handleChange} className="product-quantity margin-bottom" title="quantity do you want" min="1" placeholder="0"/><br />
+                    {/* <button className="product-btn"></button> */}
+                    <div className="check-btn form-btn">
+                      <button style={{width:"100%"}} onClick={handelClick}>Add to cart</button>
+                    </div>
                     </div>
                 </div>
 
